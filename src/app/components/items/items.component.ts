@@ -23,4 +23,6 @@ export class ItemsComponent {
       completed: true
     }
   ]
+
+  constructor(){}
 }

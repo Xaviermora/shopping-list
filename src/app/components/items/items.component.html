@@ -1,26 +1,12 @@
-<div class="container table-responsive">
-    <table class="table">
-        <thead>
-            <tr>
-                <th></th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Cantidad</th>
-                <th scope="col">Precio</th>
-                <th>Precio final</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let item of items">
-                <td>
-                    <input type="checkbox" [checked]="item.completed">
-                </td>
-                <td>{{item.title}}</td>
-                <td>{{item.quantity}}</td>
-                <td>{{item.price | currency}}</td>
-                <td>{{(item.price * item.quantity) | currency}}</td>
-                <td><button class="btn btn-danger">Eliminar</button></td>
-            </tr>
-        </tbody>
-    </table>
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-4">Nombre</div>
+        <div class="col-2">Cantidad</div>
+        <div class="col">Precio</div>
+        <div class="col-2">Precio Final</div>
+        <div class="col-2"></div>
+    </div>
+        
+    <app-item class="col-12" *ngFor="let item of items" [item]="item"></app-item>
 </div>
