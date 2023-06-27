@@ -1,4 +1,9 @@
 <div class="container">
+    <div class="d-flex justify-content-between mb-3">
+        <app-total [total]="total"></app-total>
+        <button (click)="getTotal()" class="btn btn-success mt-auto" style="height: fit-content;">Total</button>
+    </div>
+
     <div class="row">
         <div class="w-auto"><input type="checkbox" class="invisible"></div>
         <div class="col-4">Nombre</div>

@@ -23,10 +23,18 @@ export class ItemsComponent {
       completed: true
     }
   ]
+  total: number = 0
 
   constructor(){}
 
   deleteItem(item: Item){
     this.items = this.items.filter(object => object.id !== item.id)
+  }
+
+  getTotal(){
+    this.total = this.items
+                .filter(item => !item.completed)
+                .map(item => item.price * item.quantity)
+                .reduce((acc, total) => acc += total, 0)
   }
 }
