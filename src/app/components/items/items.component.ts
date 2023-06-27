@@ -25,4 +25,8 @@ export class ItemsComponent {
   ]
 
   constructor(){}
+
+  deleteItem(item: Item){
+    this.items = this.items.filter(object => object.id !== item.id)
+  }
 }
