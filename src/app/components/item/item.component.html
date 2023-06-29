@@ -1,6 +1,6 @@
-<div class="row" [ngClass]="{'text-decoration-line-through': item.completed}">
+<div class="row mb-2" [ngClass]="{'text-decoration-line-through': item.completed}">
     <div class="w-auto">
-        <input type="checkbox" [checked]="item.completed">
+        <input type="checkbox" (change)="onToggle(item)" [checked]="item.completed">
     </div>
     <div class="col-4">{{item.title}}</div>
     <div class="col-2">{{item.quantity}}</div>

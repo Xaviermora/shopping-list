@@ -9,8 +9,13 @@ import { Item } from 'src/app/models/item';
 export class ItemComponent {
   @Input() item!: Item  
   @Output() deleteItem: EventEmitter<Item> = new EventEmitter()
+  @Output() toggleCompleted: EventEmitter<Item> = new EventEmitter()
 
   onDelete(item: Item){
     this.deleteItem.emit(item)
+  }
+
+  onToggle(item: Item){
+    this.toggleCompleted.emit(item)
   }
 }

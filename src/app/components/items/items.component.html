@@ -1,8 +1,5 @@
 <div class="container">
-    <div class="d-flex justify-content-between mb-3">
-        <app-total [total]="total"></app-total>
-        <button (click)="getTotal()" class="btn btn-success mt-auto" style="height: fit-content;">Total</button>
-    </div>
+    <app-total class="mb-3" [total]="total"></app-total>
 
     <div class="row">
         <div class="w-auto"><input type="checkbox" class="invisible"></div>
@@ -13,5 +10,9 @@
         <div class="col-2"></div>
     </div>
         
-    <app-item *ngFor="let item of items" [item]="item" (deleteItem)="deleteItem($event)"></app-item>
+    <app-item 
+    *ngFor="let item of items" 
+    [item]="item" 
+    (deleteItem)="deleteItem($event)" 
+    (toggleCompleted)="toggleCompleted($event)"></app-item>
 </div>
