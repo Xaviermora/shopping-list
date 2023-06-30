@@ -20,8 +20,6 @@ export class NuevoItemComponent {
       price: this.price,
       quantity: this.quantity,
       completed: false
-    }).subscribe()
-
-    this.router.navigate(['/'])
+    }).subscribe(() => this.router.navigate(['/']))
   }
 }
