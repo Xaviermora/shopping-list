@@ -7,6 +7,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { ItemsComponent } from './components/items/items.component';
 import { ItemComponent } from './components/item/item.component';
 import { TotalComponent } from './components/total/total.component';
+import { NuevoItemComponent } from './components/nuevo-item/nuevo-item.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TotalComponent } from './components/total/total.component';
     NavbarComponent,
     ItemsComponent,
     ItemComponent,
-    TotalComponent
+    TotalComponent,
+    NuevoItemComponent
   ],
   imports: [
     BrowserModule,
