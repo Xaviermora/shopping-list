@@ -14,18 +14,21 @@ export class ItemsComponent implements OnInit {
   constructor(private itemService: ItemService){}
 
   ngOnInit(){
-    this.items = this.itemService.getItems()
-
-    this.getTotal()
+    this.itemService.getItems().subscribe(items => {
+      this.items = items
+      this.getTotal()
+    })
   }
 
   deleteItem(item: Item){
     this.items = this.items.filter(object => object.id !== item.id)
+    this.itemService.deleteItem(item).subscribe()
     this.getTotal()
   }
 
   toggleCompleted(item: Item){
     item.completed = !item.completed
+    this.itemService.toggleCompleted(item).subscribe()
     this.getTotal()
   }
 

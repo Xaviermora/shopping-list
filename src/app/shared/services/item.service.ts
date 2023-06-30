@@ -7,13 +7,13 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ItemService {
-  url: string = 'http://localhost:3000/items'
+  url: string = 'http://localhost:3000/items/'
   httpOptions = {
     headers: {
       'Content-Type': 'application/json'
     }
   }
-
+  
   constructor(private http: HttpClient) { }
 
   getItems(): Observable<Item[]> {

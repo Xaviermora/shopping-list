@@ -9,7 +9,6 @@ import { ItemService } from 'src/app/shared/services/item.service';
   styleUrls: ['./nuevo-item.component.css']
 })
 export class NuevoItemComponent {
-  id!: string
   title!: string
   price!: number
   quantity!: number
@@ -18,12 +17,11 @@ export class NuevoItemComponent {
 
   onSubmit(){
     this.itemService.addItem({
-      id: this.id,
       title: this.title,
       price: this.price,
       quantity: this.quantity,
       completed: false
-    })
+    }).subscribe()
 
     this.router.navigate(['/'])
   }
