@@ -1,1 +1,27 @@
-<p>nuevo-item works!</p>
+<form action="" (ngSubmit)="onSubmit()" class="container mt-3 col-8">
+    <div class="mb-3">
+        <h1>Añadir un nuevo articulo</h1>
+    </div>
+
+    <div class="mb-3">
+        <label for="id" class="form-label">Id</label>
+        <input type="text" class="form-control" id="id" name="id" [(ngModel)]="id"> 
+    </div>
+
+    <div class="mb-3">
+        <label for="title" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="title" name="title" [(ngModel)]="title"> 
+    </div>
+
+    <div class="mb-3">
+        <label for="price" class="form-label">Precio</label>
+        <input type="number" class="form-control" id="price" name="price" [(ngModel)]="price">
+    </div>
+
+    <div class="mb-3">
+        <label for="quantity" class="form-label">Cantidad</label>
+        <input type="number" class="form-control" id="quantity" name="quantity" [(ngModel)]="quantity">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Añadir</button>
+</form>
