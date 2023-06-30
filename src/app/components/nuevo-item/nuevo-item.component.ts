@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Item } from 'src/app/models/item';
 import { ItemService } from 'src/app/shared/services/item.service';
 
 @Component({
